@@ -16,38 +16,30 @@ class MainApp extends StatelessWidget {
           FontSizeResolvers.radius(fontSize, instance),
       rebuildFactor: (_, __) => false,
       child: MaterialApp.router(
-          title: 'Notely Todo List',
-          localizationsDelegates: context.localizationDelegates,
-          supportedLocales: context.supportedLocales,
-          locale: context.locale,
-          debugShowCheckedModeBanner: false,
-          routerConfig: Modular.routerConfig,
-          theme: theme,
-          darkTheme: darkTheme,
-          builder: (context, child) {
-            return ScrollConfiguration(
-              behavior: _GlowEffectBehavior(),
-              child: MediaQuery(
-                data: MediaQuery.of(context).copyWith(
-                  highContrast: false,
-                  boldText: false,
-                  textScaler: const TextScaler.linear(1.0),
-                ),
-                child: child!,
+        title: 'Notely Todo List',
+        localizationsDelegates: context.localizationDelegates,
+        supportedLocales: context.supportedLocales,
+        locale: context.locale,
+        debugShowCheckedModeBanner: false,
+        routerConfig: Modular.routerConfig,
+        theme: theme,
+        darkTheme: darkTheme,
+        builder: (context, child) {
+          return ScrollConfiguration(
+            behavior: ScrollBehavior().copyWith(
+              overscroll: false,
+            ),
+            child: MediaQuery(
+              data: MediaQuery.of(context).copyWith(
+                highContrast: false,
+                boldText: false,
+                textScaler: const TextScaler.linear(1.0),
               ),
-            );
-          },),
+              child: child!,
+            ),
+          );
+        },
+      ),
     );
-  }
-}
-
-class _GlowEffectBehavior extends ScrollBehavior {
-  @override
-  Widget buildOverscrollIndicator(
-    BuildContext context,
-    Widget child,
-    ScrollableDetails details,
-  ) {
-    return child;
   }
 }
