@@ -10,7 +10,7 @@ final kColorDarkScheme =
     ColorScheme.fromSeed(seedColor: AppColors.darkModeSeedBlue);
 
 final theme = ThemeData(
-  fontFamily: AssetPaths.robotoFont,
+  fontFamily: AssetPaths.parkinsansFont,
   colorScheme: kColorScheme,
   floatingActionButtonTheme: const FloatingActionButtonThemeData(
     shape: CircleBorder(),

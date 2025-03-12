@@ -1,4 +1,4 @@
 class AssetPaths {
-  static const robotoFont = 'Roboto';
+  static const parkinsansFont = 'Parkinsans';
   static const translations = 'assets/translations';
 }
