@@ -63,14 +63,16 @@ flutter:
   - assets/images/
   
   fonts:
-    - family: Roboto
+    - family: Parkinsans
       fonts:
-        - asset: assets/fonts/Roboto-Regular.ttf
+        - asset: assets/fonts/Parkinsans-Light.ttf
+        - asset: assets/fonts/Parkinsans-Medium.ttf
           style: normal
-        - asset: assets/fonts/Roboto-Bold.ttf
-        - asset: assets/fonts/Roboto-Italic.ttf
+        - asset: assets/fonts/Parkinsans-Regular.ttf
+        - asset: assets/fonts/Parkinsans-SemiBold.ttf
           style: italic
-        - asset: assets/fonts/Roboto-Medium.ttf
+        - asset: assets/fonts/Parkinsans-Bold.ttf
+        - asset: assets/fonts/Parkinsans-ExtraBold.ttf
 
 import_path_converter:
   relative: true # Select relative path import or package import(default: false)
